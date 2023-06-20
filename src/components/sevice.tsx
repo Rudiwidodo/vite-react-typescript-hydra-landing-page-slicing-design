@@ -22,7 +22,7 @@ export default function Service() {
         />
       </div>
       <div className="grid grid-cols-12 mt-28 gap-3 max-sm:gap-0 relative">
-        <div className="col-span-3 max-lg:col-span-4 max-md:col-span-6 max-sm:col-span-10 max-sm:col-start-2">
+        <div className="col-span-3 max-lg:col-span-5 max-lg:col-start-2 max-md:col-span-6 max-sm:col-span-10 max-sm:col-start-2">
           <GridColThree title="SIMULATION" path={service1}>
             <p className="text-sm text-white font-normal">
               Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
@@ -30,7 +30,7 @@ export default function Service() {
             </p>
           </GridColThree>
         </div>
-        <div className="col-span-3 max-lg:col-span-4 max-md:col-span-6 max-sm:hidden">
+        <div className="col-span-3 max-lg:col-span-5 max-md:col-span-6 max-sm:hidden">
           <GridColThree title="EDUCATION" path={service2}>
             <p className="text-sm text-white font-normal">
               Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
@@ -38,7 +38,7 @@ export default function Service() {
             </p>
           </GridColThree>
         </div>
-        <div className="col-span-3 max-lg:col-span-4 max-md:hidden">
+        <div className="col-span-3 max-lg:hidden">
           <GridColThree title="SELF-CARE" path={service3}>
             <p className="text-sm text-white font-normal">
               Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet
@@ -55,14 +55,18 @@ export default function Service() {
           </GridColThree>
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 left-0 hidden max-lg:block">
-          <div className="bg-service-bg-icon bg-no-repeat bg-cover p-2">
-            <img src={chevronLeftIcon} alt="heydra chevron left icon" />
-          </div>
+          <button type="button">
+            <div className="bg-service-bg-icon bg-no-repeat bg-cover p-2">
+              <img src={chevronLeftIcon} alt="heydra chevron left icon" />
+            </div>
+          </button>
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 right-0 hidden max-lg:block">
-          <div className="bg-service-bg-icon bg-no-repeat bg-cover p-2">
-            <img src={chevronRightIcon} alt="heydra chevron right icon" />
-          </div>
+          <button type="button">
+            <div className="bg-service-bg-icon bg-no-repeat bg-cover p-2">
+              <img src={chevronRightIcon} alt="heydra chevron right icon" />
+            </div>
+          </button>
         </div>
       </div>
     </section>

@@ -1,7 +1,10 @@
+// static images
 import heroImage from '../assets/images/hero-image.png';
 import arrowIcon from '../assets/icons/arrow-small-right.png';
 import vector1 from '../assets/images/Vector 1.png';
 import vector2 from '../assets/images/Vector 2.png';
+
+// components
 import Button from './button';
 
 export default function Hero() {
@@ -16,7 +19,7 @@ export default function Hero() {
                 Into The Depths
               </span>
             </p>
-            <p className="text-white text-2xl sm:text-5xl  font-montserrat-bold">
+            <p className="text-white text-2xl sm:text-5xl font-montserrat-bold">
               Of{' '}
               <span className="bg-gradient-to-r from-linear-one to-linear-two bg-clip-text text-transparent text-4xl sm:text-[40px]">
                 Virtual Reality

@@ -14,9 +14,9 @@ export default {
         'montserrat-bold': 'Montserrat',
       },
       backgroundImage: {
-        'hero-image': 'url(./src/assets/images/Rectangle 4.png)',
-        'service-image': 'url(./src/assets/images/Ellipse 1.png)',
-        'service-bg-icon': 'url(./src/assets/icons/Ellipse 6.png)',
+        'hero-image': 'url(/src/assets/images/Rectangle 4.png)',
+        'service-image': 'url(/src/assets/images/Ellipse 1.png)',
+        'service-bg-icon': 'url(/src/assets/icons/Ellipse 6.png)',
       },
     },
   },
