@@ -1,5 +1,5 @@
 import arrowRightLargeIcon from '../assets/icons/arrow-right-large.png';
-import aboutImage from '../assets/images/About-image.png';
+import aboutImage from '../assets/images/about-image.png';
 import vector7 from '../assets/images/Vector 7.png';
 import vector8 from '../assets/images/Vector 8.png';
 import AboutRowOne from './about-row-one';
