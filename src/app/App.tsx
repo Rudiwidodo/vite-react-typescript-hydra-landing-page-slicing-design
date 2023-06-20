@@ -1,8 +1,12 @@
+// components
 import About from '../components/about';
 import Contact from '../components/contact';
 import Hero from '../components/hero';
 import Navbar from '../components/navbar';
 import Service from '../components/sevice';
+import Tech from '../components/tech';
+
+// external css
 import './App.css';
 
 function App() {
@@ -17,6 +21,7 @@ function App() {
           <Contact />
           <About />
           <Service />
+          <Tech />
         </main>
       </div>
     </>
