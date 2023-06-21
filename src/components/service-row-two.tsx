@@ -1,16 +1,16 @@
 import Button from './button';
 
-interface GridColThreeProps {
+interface ServiceRowTwoProps {
   path: string;
   title: string;
   children: React.ReactNode;
 }
 
-export default function GridColThree({
+export default function ServiceRowTwo({
   path,
   title,
   children,
-}: GridColThreeProps) {
+}: ServiceRowTwoProps) {
   return (
     <>
       <div className="px-6 py-10 bg-gradient-to-b from-radial-two via-radial-one to-radial-two rounded-[40px]">

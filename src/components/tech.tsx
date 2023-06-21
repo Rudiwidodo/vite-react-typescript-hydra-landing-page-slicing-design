@@ -10,7 +10,7 @@ import chevronLeftIcon from '../assets/icons/chevron-small-left.png';
 
 export default function Tech() {
   return (
-    <section className="mt-28">
+    <section className="mt-28 max-sm:mt-14">
       <div className="h-[303px] max-md:h-40 relative">
         <img src={techImage} alt="hydra tech image" className="h-full" />
         <div className="absolute h-full w-full flex items-center justify-center flex-col top-0">
@@ -40,17 +40,22 @@ export default function Tech() {
         <div className="col-span-3 flex justify-center items-center max-lg:hidden">
           <img src={tech4} alt="hydra tech four" />
         </div>
+        {/* arrow right and left button slider */}
         <div className="absolute top-1/2 -translate-y-1/2 left-0 hidden max-lg:block">
           <button type="button">
-            <div className="bg-service-bg-icon bg-no-repeat bg-cover p-2">
-              <img src={chevronLeftIcon} alt="heydra chevron left icon" />
+            <div className="bg-slider-icon-1 bg-no-repeat bg-cover p-2">
+              <div className="bg-slider-icon-2 bg-no-repeat bg-cover">
+                <img src={chevronLeftIcon} alt="heydra chevron left icon" />
+              </div>
             </div>
           </button>
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 right-0 hidden max-lg:block">
           <button type="button">
-            <div className="bg-service-bg-icon bg-no-repeat bg-cover p-2">
-              <img src={chevronRightIcon} alt="heydra chevron right icon" />
+            <div className="bg-slider-icon-1 bg-no-repeat bg-cover p-2">
+              <div className="bg-slider-icon-2 bg-no-repeat bg-cover">
+                <img src={chevronRightIcon} alt="heydra chevron right icon" />
+              </div>
             </div>
           </button>
         </div>

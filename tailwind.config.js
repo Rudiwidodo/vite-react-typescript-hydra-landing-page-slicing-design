@@ -16,8 +16,12 @@ export default {
       backgroundImage: {
         'hero-image': 'url("/src/assets/images/Rectangle 4.png")',
         'service-image': 'url("/src/assets/images/Ellipse 1.png")',
-        'service-bg-icon': 'url("/src/assets/icons/Ellipse 6.png")',
+        'slider-icon-1': 'url("/src/assets/icons/Ellipse 6.png")',
+        'slider-icon-2': 'url("/src/assets/icons/Ellipse 12.png")',
         'tech-image': 'url("/src/assets/images/tech-image.png")',
+        'process-bg-icon-1': 'url("/src/assets/icons/Ellipse 7.png")',
+        'process-bg-icon-2': 'url("/src/assets/icons/Ellipse 8.png")',
+        'process-bg-icon-3': 'url("/src/assets/icons/Vector 15.png")',
       },
     },
   },

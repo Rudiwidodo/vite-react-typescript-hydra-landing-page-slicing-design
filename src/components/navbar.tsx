@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <>
       <header className="min-w-full mt-6">
-        <nav className="h-full p-1 flex items-center justify-between max-sm:items-end">
+        <nav className="h-full p-1 flex items-center justify-between max-sm:items-end relative z-10">
           <div className="flex items-end">
             <img src={brand} alt="brand heydra" className="h-14 w-16" />
             <img

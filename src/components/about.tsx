@@ -7,8 +7,8 @@ import AboutRowTwo from './about-row-two';
 
 export default function About() {
   return (
-    <section className="mt-[90px]">
-      <div className="grid grid-cols-12 gap-14 relative max-md:gap-x-0">
+    <section className="mt-[90px] max-sm:mt-14">
+      <div className="grid grid-cols-12 gap-14 relative max-md:gap-x-0 max-sm:gap-y-12">
         <AboutRowOne
           title="INTRODUCTION"
           subtitle="TO HYDRA VR"

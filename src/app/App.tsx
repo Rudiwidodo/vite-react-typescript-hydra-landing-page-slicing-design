@@ -3,6 +3,7 @@ import About from '../components/about';
 import Contact from '../components/contact';
 import Hero from '../components/hero';
 import Navbar from '../components/navbar';
+import Process from '../components/process';
 import Service from '../components/sevice';
 import Tech from '../components/tech';
 
@@ -22,6 +23,7 @@ function App() {
           <About />
           <Service />
           <Tech />
+          <Process />
         </main>
       </div>
     </>
