@@ -1,12 +1,4 @@
-interface ButtonProps {
-  children: React.ReactNode;
-  bgColor?: string;
-  ring?: string;
-  textColor: string;
-  textSize: string;
-  height: string;
-  width: string;
-}
+import ButtonProps from '../interface/button-interface';
 
 export default function Button({ ...props }: ButtonProps) {
   return (

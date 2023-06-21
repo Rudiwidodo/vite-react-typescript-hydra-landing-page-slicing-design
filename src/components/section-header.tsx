@@ -1,28 +1,20 @@
-interface ServiceRowOneProps {
-  title: string;
-  subtitle: string;
-  path: string;
-}
+import SectionHeaderProps from '../interface/section-header-interface';
 
-export default function ServiceRowOne({
-  title,
-  subtitle,
-  path,
-}: ServiceRowOneProps) {
+export default function SectionHeader({ ...props }: SectionHeaderProps) {
   return (
     <>
       <div className="col-span-6 max-md:col-span-full">
         <div>
           <h3 className="text-4xl font-montserrat-bold text-white max-md:text-center">
-            {title}
+            {props.title}
           </h3>
           <div className="flex items-center gap-7 max-md:justify-center">
             <span className="text-4xl text-slate-300 font-light">
-              {subtitle}
+              {props.subtitle}
             </span>
             <a href="#" className="max-md:hidden">
               <img
-                src={path}
+                src={props.path}
                 alt="heydra arrow right large icon"
                 className="h-12 w-56"
               />

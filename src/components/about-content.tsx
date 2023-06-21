@@ -1,45 +1,32 @@
+import AboutProps from '../interface/about-interface';
 import Button from './button';
 
-interface AboutRowTwoProps {
-  path1: string;
-  path2: string;
-  path3: string;
-  title: string;
-  subtitle: string;
-}
-
-export default function AboutRowTwo({
-  path1,
-  path2,
-  path3,
-  title,
-  subtitle,
-}: AboutRowTwoProps) {
+export default function AboutContent({ ...props }: AboutProps) {
   return (
     <>
       <div className="col-span-6 max-md:col-span-full">
         <img
-          src={path1}
+          src={props.path1}
           alt="heydra about image"
           className="relative z-10 max-md:w-4/5 max-md:mx-auto max-sm:min-w-full"
         />
         <img
-          src={path2}
+          src={props.path2}
           alt="heydra image vector about"
           className="absolute top-1/3 max-md:hidden"
         />
         <img
-          src={path3}
+          src={props.path3}
           alt="heydra image vector about"
           className="absolute top-3/4 max-md:hidden"
         />
       </div>
       <div className="col-span-6 flex flex-col justify-center max-md:col-span-full max-md:items-center">
         <h3 className="text-4xl text-white font-montserrat-bold max-md:hidden">
-          {title}
+          {props.title}
         </h3>
         <small className="text-4xl font-light text-slate-300 max-md:hidden">
-          {subtitle}
+          {props.subtitle}
         </small>
         <div className="mt-10 mb-7 max-md:mt-0">
           <p className="text-sm text-white font-light">

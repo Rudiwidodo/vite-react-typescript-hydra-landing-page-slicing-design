@@ -1,29 +1,22 @@
+import ServiceProps from '../interface/service-interface';
 import Button from './button';
 
-interface ServiceRowTwoProps {
-  path: string;
-  title: string;
-  children: React.ReactNode;
-}
-
-export default function ServiceRowTwo({
-  path,
-  title,
-  children,
-}: ServiceRowTwoProps) {
+export default function ServiceCrad({ ...props }: ServiceProps) {
   return (
     <>
       <div className="px-6 py-10 bg-gradient-to-b from-radial-two via-radial-one to-radial-two rounded-[40px]">
         <div className="flex justify-center">
           <div className="bg-service-image bg-no-repeat bg-contain p-2 object-center">
-            <img src={path} alt="peoples service images" />
+            <img src={props.path} alt="peoples service images" />
           </div>
         </div>
         <div className="mt-5 text-center">
-          <h5 className="text-2xl text-white font-montserrat-bold">{title}</h5>
+          <h5 className="text-2xl text-white font-montserrat-bold">
+            {props.title}
+          </h5>
           <hr className="mt-4 w-[154px] mx-auto" />
         </div>
-        <div className="mt-6">{children}</div>
+        <div className="mt-6">{props.children}</div>
         <div className="flex justify-center mt-8">
           <Button
             textColor="text-primary"

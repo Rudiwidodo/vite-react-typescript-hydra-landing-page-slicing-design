@@ -2,6 +2,7 @@
 import About from '../components/about';
 import Contact from '../components/contact';
 import Hero from '../components/hero';
+import Join from '../components/join';
 import Navbar from '../components/navbar';
 import Process from '../components/process';
 import Service from '../components/sevice';
@@ -24,6 +25,7 @@ function App() {
           <Service />
           <Tech />
           <Process />
+          <Join />
         </main>
       </div>
     </>
