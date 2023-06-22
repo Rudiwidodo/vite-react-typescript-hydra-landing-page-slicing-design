@@ -1,6 +1,7 @@
 // components
 import About from '../components/about';
 import Contact from '../components/contact';
+import Footer from '../components/footer';
 import Hero from '../components/hero';
 import Join from '../components/join';
 import Navbar from '../components/navbar';
@@ -27,6 +28,7 @@ function App() {
           <Process />
           <Join />
         </main>
+        <Footer />
       </div>
     </>
   );

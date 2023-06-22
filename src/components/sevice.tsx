@@ -2,6 +2,7 @@
 import chevronRightIcon from '../assets/icons/chevron-small-right.png';
 import chevronLeftIcon from '../assets/icons/chevron-small-left.png';
 import arrowRightLargeIcon from '../assets/icons/arrow-right-large.png';
+import serviceBackground from '../assets/images/Vector 14.png';
 import service1 from '../assets/images/service-1.png';
 import service2 from '../assets/images/service-2.png';
 import service3 from '../assets/images/service-3.png';
@@ -13,7 +14,12 @@ import ServiceCard from './service-card';
 
 export default function Service() {
   return (
-    <section className="mt-24 max-sm:mt-14">
+    <section className="mt-24 max-sm:mt-14 relative">
+      <img
+        src={serviceBackground}
+        alt="hydra service background"
+        className="absolute left-0 right-0 -bottom-64 max-lg:hidden"
+      />
       <div className="grid grid-cols-12 gap-14 max-md:gap-x-0">
         <SectionHeader
           title="WHY BUILD"
