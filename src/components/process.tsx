@@ -10,7 +10,7 @@ import ProcessCard from './process-card';
 
 export default function Process() {
   return (
-    <section className="mt-20">
+    <section className="mt-20" id="process">
       <div className="grid grid-cols-12 gap-14 max-sm:gap-0">
         <SectionHeader
           title="HOW WE BUILD"

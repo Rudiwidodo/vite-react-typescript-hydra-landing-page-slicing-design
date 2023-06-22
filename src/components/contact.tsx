@@ -10,7 +10,7 @@ import ContactCard from './contact-card';
 
 export default function Contact() {
   return (
-    <section className="mt-12">
+    <section className="mt-12" id="contact">
       <div className="px-9 py-6 rounded-full bg-gradient-to-r from-radial-two via-radial-one to-radial-two relative">
         <div className="grid max-sm:columns-1 sm:columns-2 md:columns-3 divide-x divide-slate-600 gap-4">
           <div className="col-start-1">

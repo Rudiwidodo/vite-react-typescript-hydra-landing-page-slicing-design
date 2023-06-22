@@ -8,7 +8,7 @@ export default function AboutContent({ ...props }: AboutProps) {
         <img
           src={props.path1}
           alt="heydra about image"
-          className="relative z-10 max-md:w-4/5 max-md:mx-auto max-sm:min-w-full"
+          className="relative max-md:w-4/5 max-md:mx-auto max-sm:min-w-full"
         />
         <img
           src={props.path2}

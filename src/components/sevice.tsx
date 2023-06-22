@@ -14,7 +14,7 @@ import ServiceCard from './service-card';
 
 export default function Service() {
   return (
-    <section className="mt-24 max-sm:mt-14 relative">
+    <section className="mt-24 max-sm:mt-14 relative" id="services">
       <img
         src={serviceBackground}
         alt="hydra service background"

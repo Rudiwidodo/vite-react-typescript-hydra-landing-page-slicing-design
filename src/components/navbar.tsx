@@ -1,9 +1,12 @@
 import brand from '../assets/images/Vector.png';
 import brandName from '../assets/images/Frame.png';
 import hamburgerIcon from '../assets/images/Hamburger-Button.png';
-import Button from './button';
+import NavbarResponsive from './navbar-responsive';
+import { useState } from 'react';
+import NavLink from './navlink';
 
 export default function Navbar() {
+  const [closeNav, setCloseNav] = useState(false);
   return (
     <>
       <header className="min-w-full mt-6">
@@ -17,42 +20,44 @@ export default function Navbar() {
             />
           </div>
           <ul className="text-white text-xs font-montserrat-bold flex gap-10 max-sm:hidden">
-            <li>
-              <a href="#">ABOUT</a>
-            </li>
-            <li>
-              <a href="#">SERVICES</a>
-            </li>
-            <li>
-              <a href="#">TECHNOLOGIES</a>
-            </li>
-            <li>
-              <a href="#">HOW TO</a>
-            </li>
+            <NavLink to="#about">ABOUT</NavLink>
+            <NavLink to="#services">SERVICES</NavLink>
+            <NavLink to="#technologies">TECHNOLOGIES</NavLink>
+            <NavLink to="#process">HOW TO</NavLink>
           </ul>
           <div className="flex font-montserrat-bold gap-9 items-end max-lg:hidden">
-            <Button
-              textColor="text-white"
-              ring="ring-1 ring-white"
-              textSize="text-xs"
-              height="h-[48px]"
-              width="w-[154px]"
+            <a
+              href="#contact"
+              className="text-white text-sm font-montserrat-bold h-[48px] w-[154px] ring-1 ring-white no-underline rounded-full flex justify-center items-center"
             >
               CONTACT US
-            </Button>
-            <Button
-              textColor="text-primary"
-              textSize="text-xs"
-              bgColor="bg-gradient-to-r from-linear-two to-linear-one"
-              height="h-[48px]"
-              width="w-[154px]"
+            </a>
+            <a
+              href="#join"
+              className="text-primary text-sm font-montserrat-bold h-[48px] w-[154px] bg-gradient-to-r from-linear-two to-linear-one no-underline rounded-full flex justify-center items-center"
             >
               JOIN HYDRA
-            </Button>
+            </a>
           </div>
           <div className="lg:hidden">
-            <img src={hamburgerIcon} alt="hamburger icon navbar" />
+            <button
+              type="button"
+              onClick={() =>
+                closeNav ? setCloseNav(false) : setCloseNav(true)
+              }
+            >
+              <img src={hamburgerIcon} alt="hamburger icon navbar" />
+            </button>
           </div>
+          {/* navbar responsive */}
+          <NavbarResponsive
+            pathBarand={brand}
+            pathName={brandName}
+            close={closeNav}
+            handleClose={() =>
+              closeNav ? setCloseNav(false) : setCloseNav(true)
+            }
+          />
         </nav>
       </header>
     </>

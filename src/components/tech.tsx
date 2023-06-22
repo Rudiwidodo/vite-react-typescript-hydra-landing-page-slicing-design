@@ -10,7 +10,7 @@ import chevronLeftIcon from '../assets/icons/chevron-small-left.png';
 
 export default function Tech() {
   return (
-    <section className="mt-28 max-sm:mt-14">
+    <section className="mt-28 max-sm:mt-14" id="technologies">
       <div className="h-[303px] max-md:h-40 relative">
         <img src={techImage} alt="hydra tech image" className="h-full" />
         <div className="absolute h-full w-full flex items-center justify-center flex-col top-0">

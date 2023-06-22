@@ -10,7 +10,7 @@ import AboutContent from './about-content';
 
 export default function About() {
   return (
-    <section className="mt-[90px] max-sm:mt-14">
+    <section className="mt-[90px] max-sm:mt-14" id="about">
       <div className="grid grid-cols-12 gap-14 relative max-md:gap-x-0 max-sm:gap-y-12">
         <SectionHeader
           title="INTRODUCTION"

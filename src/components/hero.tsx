@@ -9,9 +9,9 @@ import Button from './button';
 
 export default function Hero() {
   return (
-    <section className="mt-24 max-sm:mt-12">
+    <section className="mt-24 max-sm:mt-12" id="hero">
       <div className="grid grid-cols-12 items-center gap-6">
-        <div className="col-span-7 max-md:row-start-2 max-md:col-span-full bg-vektor-4 bg-no-repeat bg-contain max-md:relative max-md:z-10">
+        <div className="col-span-7 max-md:row-start-2 max-md:col-span-full bg-vektor-4 bg-no-repeat bg-contain max-md:relative">
           <div className="max-sm:text-center">
             <p className="bg-gradient-to-r from-linear-one to-linear-two bg-clip-text text-transparent text-4xl sm:text-5xl font-montserrat-bold">
               Dive{' '}
@@ -53,17 +53,17 @@ export default function Hero() {
             <img
               src={vector1}
               alt="background vector one hero images"
-              className="absolute z-0 top-1/2 -translate-y-1/2"
+              className="absolute -z-20 top-1/2 -translate-y-1/2"
             />
             <img
               src={vector2}
               alt="background vector one hero images"
-              className="absolute z-0 top-1/2 -translate-y-1/2"
+              className="absolute -z-20 top-1/2 -translate-y-1/2"
             />
             <img
               src={vector2}
               alt="background vector one hero images"
-              className="absolute z-0 top-1/2 -translate-y-1/2 rotate-90 w-3/4 left-0"
+              className="absolute -z-20 top-1/2 -translate-y-1/2 rotate-90 w-3/4 left-0"
             />
             <img src={heroImage} alt="heydra hero image" className="relative" />
           </div>

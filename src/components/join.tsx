@@ -3,7 +3,7 @@ import Input from './input';
 
 export default function Join() {
   return (
-    <section className="mt-28">
+    <section className="mt-28" id="join">
       <div className="bg-gradient-to-b from-radial-two via-radial-one to-radial-two rounded-[100px] flex justify-center items-center flex-col py-[90px] px-24 max-sm:px-5 max-sm:rounded-[40px] max-sm:py-11">
         <div className="text-center">
           <h3 className="text-4xl text-white font-montserrat-bold max-sm:text-2xl">
