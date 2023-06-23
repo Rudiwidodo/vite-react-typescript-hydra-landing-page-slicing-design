@@ -45,7 +45,7 @@ export default function Join() {
             <textarea
               cols={30}
               rows={3}
-              className="w-full px-10 py-7 outline-none ring-2 ring-white bg-transparent rounded-[40px] mt-9 text-white max-md:mt-5"
+              className="w-full px-10 py-7 outline-none ring-2 ring-white bg-transparent rounded-[40px] mt-9 text-white max-md:mt-5 max-sm:py-4 max-sm:px-7"
               placeholder="Tell Us Something..."
             ></textarea>
 

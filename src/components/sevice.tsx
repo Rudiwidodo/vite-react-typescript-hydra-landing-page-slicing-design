@@ -70,7 +70,7 @@ export default function Service() {
       </div>
       <Carousel>
         <div
-          className="relative flex justify-between items-center transition duration-500 ease-in mt-28 gap-3 max-lg:gap-0 max-sm:gap-0 max-sm:mt-6"
+          className="relative flex justify-between items-center transition duration-500 ease-in mt-28 gap-3 max-lg:gap-0 max-sm:mt-6"
           style={{ transform: `translateX(-${currentVal * 100}%)` }}
         >
           <CraouselItems />

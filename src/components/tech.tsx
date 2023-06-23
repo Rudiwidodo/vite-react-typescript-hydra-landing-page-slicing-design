@@ -1,14 +1,46 @@
 // static images
 import arrowDownIcon from '../assets/icons/chevron-small-down.png';
 import techImage from '../assets/images/tech-image.png';
-import tech1 from '../assets/images/Hydra-Tech1 1.png';
-import tech2 from '../assets/images/Hydra-Tech2 1.png';
-import tech3 from '../assets/images/Hydra-Tech3 1.png';
-import tech4 from '../assets/images/Hydra-Tech4 1.png';
 import chevronRightIcon from '../assets/icons/chevron-small-right.png';
 import chevronLeftIcon from '../assets/icons/chevron-small-left.png';
+import Carousel from './carousel';
+
+// static data interface
+import { TechData } from '../data/tech-data';
+import { useState } from 'react';
+
+function CraouselItems() {
+  return (
+    <>
+      {TechData.map((val) => {
+        return (
+          <div
+            key={val.id}
+            className="flex justify-center items-center max-lg:flex-none max-lg:w-full"
+          >
+            <img src={val.path} alt={val.alt} className="max-sm:w-1/2" />
+          </div>
+        );
+      })}
+    </>
+  );
+}
 
 export default function Tech() {
+  const [currentVal, setCurrentVal] = useState<number>(0);
+
+  const prev = (currentIndex: number) => {
+    currentVal == 0
+      ? setCurrentVal(TechData.length - 1)
+      : setCurrentVal(currentIndex - 1);
+  };
+
+  const next = (currentIndex: number) => {
+    currentIndex == TechData.length - 1
+      ? setCurrentVal(0)
+      : setCurrentVal(currentIndex + 1);
+  };
+
   return (
     <section className="mt-28 max-sm:mt-14" id="technologies">
       <div className="h-[303px] max-md:h-40 relative">
@@ -22,27 +54,22 @@ export default function Tech() {
           </p>
         </div>
         <div className="absolute bg-service-bg-icon bg-no-repeat bg-contain -bottom-8 left-1/2 -translate-x-1/2 max-md:hidden">
-          <button type="button">
-            <img src={arrowDownIcon} alt="hydra arrow down icon" />
-          </button>
+          <div className="bg-slider-icon-1 bg-no-repeat bg-cover p-1">
+            <div className="bg-slider-icon-2 bg-no-repeat bg-cover">
+              <img src={arrowDownIcon} alt="heydra chevron left icon" />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="grid grid-cols-12 mt-11 gap-16 relative max-lg:gap-0">
-        <div className="col-span-3 flex justify-center items-center max-lg:col-span-5 max-lg:col-start-2 max-md:col-start-1 max-md:col-span-12">
-          <img src={tech1} alt="hydra tech one" />
+      <Carousel>
+        <div
+          className="mt-11 flex justify-between max-lg:gap-0 max-sm:mt-6 relative trasition duration-500 ease-in"
+          style={{ transform: `translateX(-${currentVal * 100}%)` }}
+        >
+          <CraouselItems />
         </div>
-        <div className="col-span-3 flex justify-center items-center max-lg:col-span-5 max-md:hidden">
-          <img src={tech3} alt="hydra tech two" />
-        </div>
-        <div className="col-span-3 flex justify-center items-center max-lg:hidden">
-          <img src={tech2} alt="hydra tech three" />
-        </div>
-        <div className="col-span-3 flex justify-center items-center max-lg:hidden">
-          <img src={tech4} alt="hydra tech four" />
-        </div>
-        {/* arrow right and left button slider */}
         <div className="absolute top-1/2 -translate-y-1/2 left-0 hidden max-lg:block">
-          <button type="button">
+          <button type="button" onClick={() => prev(currentVal)}>
             <div className="bg-slider-icon-1 bg-no-repeat bg-cover p-2">
               <div className="bg-slider-icon-2 bg-no-repeat bg-cover">
                 <img src={chevronLeftIcon} alt="heydra chevron left icon" />
@@ -51,7 +78,7 @@ export default function Tech() {
           </button>
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 right-0 hidden max-lg:block">
-          <button type="button">
+          <button type="button" onClick={() => next(currentVal)}>
             <div className="bg-slider-icon-1 bg-no-repeat bg-cover p-2">
               <div className="bg-slider-icon-2 bg-no-repeat bg-cover">
                 <img src={chevronRightIcon} alt="heydra chevron right icon" />
@@ -59,7 +86,8 @@ export default function Tech() {
             </div>
           </button>
         </div>
-      </div>
+      </Carousel>
+      {/* arrow right and left button slider */}
     </section>
   );
 }
