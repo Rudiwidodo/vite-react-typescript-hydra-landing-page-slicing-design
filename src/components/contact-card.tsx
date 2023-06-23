@@ -9,9 +9,7 @@ export default function ContactCard({ ...props }: ContactProps) {
           alt={props.alt}
           className="w-[70px] h-[70px] mr-1"
         />
-        <p className="text-sm font-normal text-white sm:text-2xl sm:font-bold">
-          {props.children}
-        </p>
+        {props.children}
       </div>
     </>
   );

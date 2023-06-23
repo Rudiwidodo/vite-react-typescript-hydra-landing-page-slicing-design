@@ -4,7 +4,7 @@ import Button from './button';
 export default function ServiceCrad({ ...props }: ServiceProps) {
   return (
     <>
-      <div className="px-6 py-10 bg-gradient-to-b from-radial-two via-radial-one to-radial-two rounded-[40px]">
+      <div className="px-6 py-10 bg-gradient-to-b from-radial-two via-radial-one to-radial-two rounded-[40px] max-sm:w-4/5 max-sm:mx-auto max-[456px]:w-full">
         <div className="flex justify-center">
           <div className="bg-service-image bg-no-repeat bg-contain p-2 object-center">
             <img src={props.path} alt="peoples service images" />
